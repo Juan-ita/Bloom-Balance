@@ -1,6 +1,6 @@
 ### Self Care Planner
 
-The self Csre Planner is an application that helps users orgernize and maintain healthy routines. Users can manage tasks, track habits, monitor water intake, record moods, write journal entries and set personal goals. It provides an easy way to stay productive and prioritize self-care.
+The Self Care Planner is an application that helps users organize and maintain healthy routines. Users can manage tasks, track habits, monitor water intake, record moods, write journal entries and set personal goals. It provides an easy way to stay productive and prioritize self-care.
 
 ## Features
 1. Add and manage daily tasks
