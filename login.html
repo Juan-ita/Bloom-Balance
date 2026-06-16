@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/beb9c9acc8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>login</h1>
+<body class="bg-white h-screen flex item-center justify-center">
+    <section class="w-[1100px] h-[700px] bg-pink-200 rounded-[40px] overflow-hidden shadow-2xl flex mt-5">
+        <!--Left side-->
+        <div class="w-3/2 bg-cover bg-cover"
+        style="background-image: url(assets/images/Every\ era\ doesn’t\ have\ to\ be\ stressful.jpg);">
+        </div>
+        <!--Right side-->
+        <div class="w-3/2 flex items-center justify-center">
+            <div class="bg-white/20 backdrop-blur-md max-w-l w-full p-8 rounded-3xl space-y-6" >
+            <h1 class="font-bold text-5xl">Welcome Back! <i class="fa-solid fa-spa"></i></h1>
+
+            <form id="login-form" class="space-y-6">
+                <label for="username/Email">Username/Email</label>
+                <input id="login-details" type="text" required placeholder="Enter username or email" class="border border-gray-800 px-3 rounded-lg w-full">
+
+                <label for="password">Password</label>
+                <input id="login-password" type="password" required placeholder="Enter your password" class="w-full border border-gray-800 rounded-lg px-3">
+
+                <button type="button" class="bg-pink-500 w-full p-3 rounded-xl text-2xl text-white font-bold hover:bg-pink-300 cursor-pointer">Log in</button>
+            </form>
+           
+            <div class="flex item-center my-6 mt-9">
+                 <div class="flex-grow border-t border-gray-600"></div>
+                 <span class="mx-4 text-sm">OR</span>
+                 <div class="flex-grow border-t border-gray-600"></div>
+            </div>
+            
+            <div class="text-rose-600 text-6xl px-13 cursor-pointer">
+            <i class="fa-brands fa-google hover:text-rose-900"></i>
+            <i class="fa-brands fa-facebook hover:text-rose-900"></i>
+            <i class="fa-brands fa-apple hover:text-rose-900"></i>
+            </div>
+
+        </div>
+        </div>
+        
+    </section>
+    
 </body>
 </html>
