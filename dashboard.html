@@ -151,9 +151,111 @@
           <div class="w-full bg-pink-100/40 h-2 rounded-full overflow-hidden">
             <div class="bg-gradient-to-r from-pink-300 to-pink-800 h-full w-[67%] rounded-full"></div>
           </div>
+          <p class="text-xs">67%</p>
         </div>
 
         <!--Habits completed-->
+        <div class="bg-white ml-5 p-4 mt-4 rounded-lg">
+            <i class="fa-regular fa-heart bg-purple-100 text-2xl rounded-full p-3 text-purple-400"></i><h1 class="text-xs">Habits Completed</h1>
+            <div class="flex">
+            <p class="font-bold text-xl mr-2">5</p> <span>/</span> <span class="ml-1 text-lg">7</span>
+            </div>
+            <div class="bg-purple-100 h-2 rounded-full overflow-hidden">
+                <div class="bg-purple-900 h-2 w-[71%] rounded-full"></div>
+            </div>
+            <p class="text-xs">71%</p>
+        </div>
+
+        <!--Water  intake-->
+        <div class="bg-white mt-4 p-4 ml-5 rounded-lg">
+            <i class="fa-solid fa-droplet text-sky-400 bg-sky-100 rounded-full p-3 text-2xl"></i><h1 class="text-xs">Water Intake</h1>
+            <div class="flex">
+            <p class="font-bold mr-2 text-xl">6</p> <span>/</span> <span class="text-lg ml-1">8 </span><p class="text-xs mt-2 ml-2">glassses</p>
+            </div>
+            <div class="bg-sky-100 h-2 rounded-full">
+                <div class="bg-sky-800 h-2 rounded-full w-[75%]"></div>
+            </div>
+            <p class="text-xs">75%</p>
+        </div>
+
+        <!--Self care score-->
+        <div class="bg-white mt-4 p-4 ml-5 rounded-lg">
+            <i class="fa-solid fa-leaf text-green-500 text-2xl bg-green-100 rounded-full p-3"></i><h1 class="text-xs">Self-Care Score</h1>
+            <p class="font-bold text-2xl">85%</p>
+           
+               <div class="bg-green-100 h-2 rounded-full">
+                <div class="bg-green-600 h-2 w-[85%] rounded-full"></div>
+            </div> 
+            <p class="text-xs">Great Job</p>
+           
+            
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="flex">
+        <!--Task card-->
+        <div class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
+            <div class=" flex justify-between p-4">
+                <h1>Today's Tasks</h1>
+                <p id="allTasks">View All</p>
+            </div>
+            <!--Task 1-->
+            <div class="flex items-center text-xs bg-pink-200/30 p-3">
+                <input id="task1" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <label for="task1" class="font-bold ml-2">Morning skincare routine</label>
+                <span class="text-gray-500 ml-10">7:00 Am</span>
+            </div>
+            <hr class="text-pink-400/30">
+
+            <!--Task 2-->
+            <div class="flex items-center text-xs bg-pink-200/30 p-3">
+                <input id="task2" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <label for="task2" class="font-bold ml-3">Drink 8 glasses of water</label>
+                <span class="text-gray-500 ml-11">All day</span>
+            </div>
+            <hr class="text-pink-400/30">
+
+            <!--Task 3-->
+            <div class="flex items-center text-xs bg-pink-200/30 p-3">
+                <input id="task3" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <label for="task3" class="font-bold ml-3">20 mins of exercise</label>
+                <span class="text-gray-500 ml-15">Completed</span>
+            </div>
+            <hr class="text-pink-400/30">
+
+            <!--task 4-->
+            <div class="flex items-center text-xs bg-pink-200/30 p-3">
+                <input id="task4" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <label for="task4" class="font-bold ml-3">Read a few pages</label>
+                <span class="text-gray-500 ml-20">9:00 PM</span>
+            </div>
+            <hr class="text-pink-400/30">
+
+            <!--task 5-->
+            <div class="flex items-center text-xs bg-pink-200/30 p-3">
+                <input id="task5" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <label for="task5" class="font-bold ml-3">Journal before bed</label>
+                <span class="text-gray-500 ml-17">10:00 PM</span>
+            </div>
+            <hr class="text-pink-400/30">
+
+            <!--task-6-->
+            <div class="flex items-center text-xs bg-pink-200/30 p-3">
+                <input id="task6" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <label for="task6" class="font-bold ml-3">No phone 1hr before bed</label>
+                <span class="text-gray-500 ml-11">9:30 PM</span>
+            </div>
+            <hr class="text-pink-400/30">
+
+            <div id="addTask" class="ml-20 text-pink-600 font-bold flex p-2 cursor-pointer">
+                <i class="fa-solid fa-cross mt-1"></i><p>Add New Task</p>
+            </div>
+            
+        </div>
+
+        <!--Habit Tracker-->
     </div>
 </section>
     
