@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Care PLanner</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/beb9c9acc8.js" crossorigin="anonymous"></script>
+   <!-- <link rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.css">-->
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
+</head>
+<body class="bg-pink-100/30 h-screen">
+    <section class="flex">
+          <!--Side bar-->
+        <aside class="bg-white/50 w-64 backdrop-blur h-screen border-r border-pink-600 rounded-xl hidden peer-checked:block md:block  overflow-y-auto">
+             <h1 class="italic text-pink-400 text-2xl"><i class="fa-solid fa-clover"></i>Self-Care</h1> <span class="ml-7 text-gray-600 italic">PLANNER</span> 
+             
+             <!--Features-->
+             <nav class="space-y-6 flex flex-col mt-7 px-2 ">
+                <a href="dashboard.html" class=" hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-house text-pink-600 mr-3"></i>Dashboard</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-list-check hover:bg-pink-200 text-pink-600 mr-3"></i>Tasks</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-heart hover:bg-pink-200 text-pink-600 mr-3"></i>Habits</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-book hover:bg-pink-200 text-pink-600 mr-3"></i>Journal</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-face-grin hover:bg-pink-200 text-pink-600 mr-3"></i>Mood Tracker</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-droplet hover:bg-pink-200 text-pink-600 mr-3"></i>Water Tracker</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-bullseye hover:bg-pink-200 text-pink-600 mr-3"></i>Goals</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-calendar hover:bg-pink-200 text-pink-600 mr-3"></i>Planner</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-gear hover:bg-pink-200 text-pink-600 mr-3"></i>Settings</a>
+             </nav>
+
+            <!--CALENDAR-->
+             <!--<div id="calendar"></div>-->
+             <div class="bg-white/10 border border-pink-200 rounded-xl shadow-2xl p-6 mt-3">
+                <h2 class="text-2xl font-bold text-pink-500 mb-4">June 2026</h2>
+                <div class="grid grid-cols-7">
+                   
+                    <div class="text-gray-300">S</div>
+                    <div class="text-gray-300">M</div>
+                    <div class="text-gray-300">T</div>
+                    <div class="text-gray-300">W</div>
+                    <div class="text-gray-300">Th</div>
+                    <div class="text-gray-300">F</div>
+                    <div class="text-gray-300">S</div>
+                    
+                    
+                    <!--Dates-->
+                    <div class="text-sm">1</div>
+                    <div class="text-sm">2</div>
+                    <div class="text-sm">3</div>
+                    <div class="text-sm">4</div>
+                    <div class="text-sm">5</div>
+                    <div class="text-sm">6</div>
+                    <div class="text-sm">7</div>
+                    <div class="text-sm">8</div>
+                    <div class="text-sm">9</div>
+                    <div class="text-sm">10</div>
+                    <div class="text-sm">11</div>
+                    <div class="text-sm">12</div>
+                    <div class="text-sm">13</div>
+                    <div class="text-sm">14</div>
+                    <div class="text-sm">15</div>
+                    <div class="text-sm">16</div>
+                    <div class="text-sm">17</div>
+                    <div class="text-sm">18</div>
+                    <div class="text-sm">19</div>
+                    <div class="text-sm">20</div>
+                    <div class="text-sm">21</div>
+                    <div class="text-sm ">22</div>
+                    <div class="text-sm">23</div>
+                    <div class="text-sm">24</div>
+                    <div class="text-sm">25</div>
+                    <div class="text-sm">26</div>
+                    <div class="text-sm">27</div>
+                    <div class="text-sm">28</div>
+                    <div class="text-sm">29</div>
+                    <div class="text-sm">30</div>
+                </div>
+             </div>
+
+             <!--Reminder-->
+             <div class="bg-rose-400 mt-5 mb-7 rounded-xl p-6">
+                <h1 class="font-bold text-lg"><i class="fa-solid fa-heart text-rose-200 ml-2"></i>Reminder</h1>
+                <p class="text-sm">Take care of yourself like you take care of others.</p>
+             </div>
+        </aside>
+
+
+        <!--MAIN SECTION-->
+        <main class="p-6 flex-1">
+        <div class="flex justify-between">
+            <div>
+              <h1 class="text-2xl font-bold">Good Morning, Queen!<i class="fa-solid fa-spa text-pink-300"></i></h1>
+              <p class="text-xs">You've got thes! Let's make today amaizing.</p>
+            </div>
+            <div>
+               <p class="text-sm">Monday, June 22, 2026</p> 
+            </div>
+        </div>
+           <!--Quote-->
+ <section>
+            <div class="flex">
+            <div class="bg-pink-600/40 p-6 rounded-xl mt-4 w-1/2">
+            <p><i class="fa-solid fa-quote-left text-pink-500"></i>You glow differently when you prioritize yourself. <i class="fa-solid fa-seedling text-emerald-600 text-xl"></i></p>
+        </div>
+        <!--Moods-->
+        <div class="bg-white p-3 rounded-2xl w-1/2 border border-pink-200">
+            <h1 class="font-bold ">How are you feeling?</h1>
+            <div class="text-4xl text-amber-300 flex justify-between p-3 mt-3">
+                <div>
+                    <i class="fa-regular fa-face-grin hover:text-pink-300"></i>
+                    <p class="text-sm text-black ">Happy</p>
+                </div>
+                <div>
+                 <i class="fa-regular fa-face-sad-cry hover:text-pink-300"></i>
+                 <p class="text-sm text-black ml-3">Sad</p>
+                </div>
+
+                <div>
+                <i class="fa-regular fa-face-tired hover:text-pink-300"></i>
+                <p class="text-sm text-black ml-3">Tired</p>
+                </div>
+
+                <div>
+                <i class="fa-solid fa-face-meh hover:text-pink-300"></i>
+                <p class="text-sm text-black ml-4 ">Ok</p>
+                </div>
+
+                <div>
+                <i class="fa-solid fa-face-grin-stars hover:text-pink-300"></i>
+                <p class="text-sm text-black ">Amazing</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+        
+
+        <!--Progress-->
+<section>
+    <div class="grid grid-cols-4">
+         <!--Task Completed-->
+        <div class="bg-white mt-4 p-4 rounded-lg">
+          <i class="fa-regular fa-clipboard text-2xl text-pink-500 rounded-full bg-pink-100 p-3"></i>
+          <h1 class="text-xs">Tasks Completed</h1>
+        <div class="flex">
+            <p class="font-bold text-xl mr-2">8</p><span>/</span> <span class="ml-1 text-lg">12</span>
+        </div>
+          <div class="w-full bg-pink-100/40 h-2 rounded-full overflow-hidden">
+            <div class="bg-gradient-to-r from-pink-300 to-pink-800 h-full w-[67%] rounded-full"></div>
+          </div>
+        </div>
+
+        <!--Habits completed-->
+    </div>
+</section>
+    
+
+    </main>
+   </section>
+
+    <!--Main-->
+    
+    
+</body>
+</html>
