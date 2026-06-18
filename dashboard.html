@@ -6,15 +6,15 @@
     <title>Self Care PLanner</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/beb9c9acc8.js" crossorigin="anonymous"></script>
-   <!-- <link rel="stylesheet"
-         href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.css">-->
-
+    
+   
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
 </head>
 <body class="bg-pink-100/30 h-screen">
     <section class="flex">
           <!--Side bar-->
-        <aside class="bg-white/50 w-64 backdrop-blur h-screen border-r border-pink-600 rounded-xl hidden peer-checked:block md:block  overflow-y-auto">
+        <aside class="bg-white/50 w-64 backdrop-blur border-r border-pink-600 
+                      rounded-xl hidden peer-checked:block md:block fixed md:sticky top-0">
              <h1 class="italic text-pink-400 text-2xl"><i class="fa-solid fa-clover"></i>Self-Care</h1> <span class="ml-7 text-gray-600 italic">PLANNER</span> 
              
              <!--Features-->
@@ -98,7 +98,8 @@
                <p class="text-sm">Monday, June 22, 2026</p> 
             </div>
         </div>
-           <!--Quote-->
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>        
+<!--Quote-->
  <section>
             <div class="flex">
             <div class="bg-pink-600/40 p-6 rounded-xl mt-4 w-1/2">
@@ -109,26 +110,26 @@
             <h1 class="font-bold ">How are you feeling?</h1>
             <div class="text-4xl text-amber-300 flex justify-between p-3 mt-3">
                 <div>
-                    <i class="fa-regular fa-face-grin hover:text-pink-300"></i>
+                    <i class="fa-regular fa-face-grin hover:text-pink-300 mood" data-mood="Happy"></i>
                     <p class="text-sm text-black ">Happy</p>
                 </div>
                 <div>
-                 <i class="fa-regular fa-face-sad-cry hover:text-pink-300"></i>
+                 <i class="fa-regular fa-face-sad-cry hover:text-pink-300 mood" data-mood="Sad"></i>
                  <p class="text-sm text-black ml-3">Sad</p>
                 </div>
 
                 <div>
-                <i class="fa-regular fa-face-tired hover:text-pink-300"></i>
+                <i class="fa-regular fa-face-tired hover:text-pink-300 mood" data-mood="Tired"></i>
                 <p class="text-sm text-black ml-3">Tired</p>
                 </div>
 
                 <div>
-                <i class="fa-solid fa-face-meh hover:text-pink-300"></i>
+                <i class="fa-solid fa-face-meh hover:text-pink-300 mood" data-mood="Ok"></i>
                 <p class="text-sm text-black ml-4 ">Ok</p>
                 </div>
 
                 <div>
-                <i class="fa-solid fa-face-grin-stars hover:text-pink-300"></i>
+                <i class="fa-solid fa-face-grin-stars hover:text-pink-300 mood" data-mood="Amazing"></i>
                 <p class="text-sm text-black ">Amazing</p>
                 </div>
             </div>
@@ -137,7 +138,7 @@
     </div>
 </section>
         
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!--Progress-->
 <section>
     <div class="grid grid-cols-4">
@@ -193,13 +194,14 @@
     </div>
 </section>
 
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <section>
     <div class="flex">
         <!--Task card-->
         <div class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
             <div class=" flex justify-between p-4">
                 <h1>Today's Tasks</h1>
-                <p id="allTasks">View All</p>
+                <p id="allTasks" class="text-pink-400">View All</p>
             </div>
             <!--Task 1-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
@@ -255,16 +257,260 @@
             
         </div>
 
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!--Habit Tracker-->
+        <div class="bg-white space-y-6 ml-4 mt-5 border border-pink-400 rounded-lg p-6">
+            <div class="flex justify-between">
+                <h1 class="font-bold">Habit Tracker</h1>
+                <p class="text-pink-500 text-sm cursor-pointer hover:underline">View All</p>
+            </div>
+
+            <div class="grid grid-cols-7 gap-x-0 text-sm ">
+                <div class="text-center text-xs ml-28">M</div>
+                <div class="text-center text-xs ml-20">T</div>
+                <div class="text-center text-xs ml-9">W</div>
+                <div class="text-center text-xs ml-5">Th</div>
+                <div class="text-center text-xs">F</div>
+                <div class="text-center text-xs mr-15">S</div>
+                <div class="text-center text-xs mr-20">S</div>
+            </div>
+
+            <div class="space-y-3">
+               <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
+                 <h1 class="text-xs  ">Drink Water</h1>
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+               </div>
+
+               <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
+                 <h1 class="text-xs ">Skincare Routine</h1>
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+               </div>
+
+               <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
+                 <h1 class="text-xs ">Exercise</h1>
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+               </div>
+
+               <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
+                 <h1 class="text-xs ">SRead</h1>
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+               </div>
+
+               <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
+                <h1 class="text-xs ">Meditate</h1>
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+               </div>
+
+               <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
+                <h1 class="text-xs ">Sleep by 11 PM</h1>
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+                <input type="checkbox" class="w-5 h-5 accent-pink-400">
+               </div>
+               
+            </div>
+        </div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+         <!--Journal-->
+       <!--- <div class="flex flex-col">
+            <div>
+            <div class="bg-white space-y-6 border border-pink-400 p-6 mt-4 ml-5 rounded-xl">
+                <div class="flex justify-between gap-6">
+                    <h1 class="font-bold text-xl">Journal</h1>
+                    <p class="text-xs cursor-pointer text-rose-400 font-bold">New Entry</p>
+                </div>
+                <div class="bg-rose-200 border border-rose-800 rounded-xl p-6 ">
+                    <i class="fa-solid fa-quote-left text-pink-500 text-xl"></i>
+                    <p>Today was a good day. Ifelt productive and calm. I'm gratful for the little things and for another chance for growth.</p>
+                    <i data-lucide="flower" class="text-pink-500"></i>
+
+                    <div class="flex justify-between text-gray-400 text-sm mt-5">
+                        <p>June 21, 2026 . 9:30 PM</p>
+                    </div>
+                </div>
+
+            </div>
+            </div>-->
+
+            
+        </div>    
+        
     </div>
 </section>
-    
 
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    
+<section>
+    <div class="flex">
+<!--Water Tracker-->
+            <div>
+             <div class="bg-white border border-pink-400 rounded-lg mt-5 space-y-6 p-6">
+                <div class="flex justify-between">
+                 <h1 class="font-bold text-2xl">Water Tracker</h1>
+                <p class="font-bold text-pink-400 text-sm cursor-pointer">Edit Goal</p> 
+                </div>
+
+
+            <div class="flex">
+               <i data-lucide="milk" class="w-50 h-50 text-blue-400"></i>
+               <div>
+                <p class="font-bold text-6xl">6 </p><span class="text-xl font-semibold">of 8 glasses</span>
+                <p class="italic">Keep going!</p>
+               </div>
+                </div>
+                   <!--Glasses-->
+                <div class="flex">
+                <div class="text-blue-400 flex">
+                <i data-lucide="glass-water"></i>
+                <i data-lucide="glass-water"></i>
+                <i data-lucide="glass-water"></i>
+                <i data-lucide="glass-water"></i>
+                <i data-lucide="glass-water"></i>
+                <i data-lucide="glass-water"></i>
+                    </div>
+                
+                <i data-lucide="glass-water"></i>
+                <i data-lucide="glass-water"></i>
+                </div>
+                
+            </div>
+            </div>
+    <!-----Self-care Goals-->
+     <div class="flex">
+      <div class="bg-white border border-pink-400 rounded-lg p-6 space-y-6 mt-4 ml-3">
+        <!--Header-->
+        <div class="flex justify-between gap-9">
+            <h1 class="font-bold text-2xl">Self-Care Goals</h1>
+            <p class="font-bold text-pink-500 text-sm cursor-pointer hover:underline">View All</p>
+        </div>
+        <!--Goals-->
+        <div>
+            <div>
+                <h1>Take better care of my skin</h1>
+                <div class="bg-pink-100 w-full rounded-full h-2">
+                    <div class="h-2 bg-pink-600 w-[80%] rounded-full"></div> 
+                    <p class="text-xs font-bold">80%</p>
+                </div>
+               
+                
+            </div>
+            <div class="mt-9">
+                <h1>Exercise 4x a week</h1>
+                <div class="bg-pink-100 w-full rounded-full h-2">
+                    <div class="h-2 bg-pink-600 w-[60%] rounded-full"></div> 
+                    <p class="text-xs font-bold">60%</p>
+                </div>
+            </div>
+
+            <div class="mt-9">
+                <h1>Read 12 books this year</h1>
+                <div class="bg-pink-100 w-full rounded-full h-2">
+                    <div class="h-2 bg-pink-600 w-[40%] rounded-full"></div> 
+                    <p class="text-xs font-bold">40%</p>
+                </div>
+            </div>
+
+            <div class="mt-9">
+                <h1>Traveling</h1>
+                <div class="bg-pink-100 w-full rounded-full h-2">
+                    <div class="h-2 bg-pink-600 w-[30%] rounded-full"></div> 
+                    <p class="text-xs font-bold">30%</p>
+                </div>
+            </div>
+        </div>
+
+      </div> 
+      <!--Upcoming events-->
+      <div class="bg-white rounded-lg border border-pink-400 space-y-6 p-6 mt-4 ml-4">
+        <div class="font-bold text-2xl">
+            <h1>Upcoming Reminders</h1>
+        </div>
+        <!--Reminders-->
+        <div class="font-semibold">
+             <i class="fa-regular fa-calendar bg-pink-100 text-rose-500 p-3 rounded-xl shadow-md"></i>
+              <h1>  Doctor Appointment</h1>
+            <div class="flex">
+                <p class="text-gray-500 text-sm">June 29, 2026 . 10:00AM</p>
+            </div>
+        </div>
+
+        <div class="font-semibold">
+            <i class="fa-solid fa-gift bg-purple-100 text-purple-700 p-3 rounded-lg"></i>
+            <h1>Mitchelle's Birthday</h1>
+
+            <div class="flex text-gray-500 text-sm">
+                <p>June 2, 2026 . 12 PM</p>
+            </div>
+        </div>
+
+        <div  class="font-semibold">
+            <i class="fa-solid fa-jet-fighter bg-sky-100 text-sky-500 p-3 rounded-lg "></i>
+            <h1>Trip to Tokyo with Mitchelle</h1>
+
+            <div class="flex text-sm text-gray-500">
+                <p>June 5, 2026 . 9 PM</p>
+            </div>
+        </div>
+
+      </div>
+
+     </div>
+     <!--<div class="">
+     <div class="bg-pink-200 rounded-lg p-3 ml-4 mt-4">
+        <div>
+            <h1 class="font-bold text-2xl">Motivation for You <i class="fa-regular fa-heart text-pink-500 font-bold "></i></h1>
+            <p>It always seems impossible untill its done. </p><i data-lucide="flower" class="text-green-800"></i>
+            
+        </div>
+     </div> 
+     </div>-->
+     
+    </div>
+    
+    
+</section>
     </main>
    </section>
-
-    <!--Main-->
     
-    
+  <script src="script.js"></script>  
+  <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
