@@ -6,33 +6,33 @@
     <title>Sign in</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gradient-to-b from-rose-300 via-white to-rose-400 h-screen">
+<body class="bg-gradient-to-b from-rose-300 via-purple-400 to-rose-400 h-screen">
     <section class="bg-white/20 max-w-4xl mx-auto mt-6 rounded-xl space-y-6 p-6">
-        <h1 class="font-bold text-4xl text-white">Start planning today</h1> 
+        <h1 class="font-bold text-4xl bg-gradient-to-br from-indigo-400 to-pink-500 bg-clip-text text-transparent">Start planning today</h1> 
         <form id="user-form" class="space-y-6 text-">
             <div class="flex item-center">
                 <label for="name">First Name:</label>
-                <input type="text" id="user-firstname" required placeholder="Enter your first name" class="rounded-lg border border-gray-800  ml-4 px-3">
+                <input type="text" id="user-firstname" required placeholder="Enter your first name" class="rounded-lg border border-gray-800  ml-4 px-3 p-4">
 
                 <label for="name" class="ml-4">Last Name:</label>
-                <input type="text" id="user-lastname" required placeholder="Enter your last name" class="ml-4 rounded-lg border border-gray-800 px-3">
+                <input type="text" id="user-lastname" required placeholder="Enter your last name" class="ml-4 rounded-lg border border-gray-800 px-3 p-4">
 
             </div>
 
             <label for="username">Username</label>
-            <input type="text" id="UserName" required placeholder="UserName" class="w-full rounded-lg border border-gray-800 px-3">
+            <input type="text" id="UserName" required placeholder="UserName" class="w-full rounded-lg border border-gray-800 px-3 p-4">
 
             <label for="email">Email</label>
-            <input type="email" id="user-email" required placeholder=".......@gmail.com" class="w-full border border-gray-800 rounded-lg px-3">
+            <input type="email" id="user-email" required placeholder=".......@gmail.com" class="w-full border border-gray-800 rounded-lg px-3 p-4">
 
             <label for="password">Password</label>
-            <input type="password" id="user-password" required placeholder="********" class="w-full rounded-lg border border-gray-800 px-3 ">
+            <input type="password" id="user-password" required placeholder="********" class="w-full rounded-lg border border-gray-800 px-3 p-4">
 
             <label for="password">Confirm Password</label>
-            <input type="password" id="confirm-password" required placeholder="********" class="w-full border border-gray-800 rounded-lg px-3">
+            <input type="password" id="confirm-password" required placeholder="********" class="w-full border border-gray-800 rounded-lg px-3 p-4">
 
             <label for="age">Age</label>
-            <input type="number" id="user-age" required placeholder="Enter Your Age" class="w-full border border-gray-800 rounded-lg px-3">
+            <input type="number" id="user-age" required placeholder="Enter Your Age" class="w-full border border-gray-800 rounded-lg px-3 p-4">
             <button type="submit" class="bg-pink-500 w-full p-3 rounded-xl text-2xl text-white font-black hover:bg-pink-400 cursor-pointer">Start</button>
 
         </form>

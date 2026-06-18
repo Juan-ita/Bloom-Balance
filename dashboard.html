@@ -20,7 +20,7 @@
              <!--Features-->
              <nav class="space-y-6 flex flex-col mt-7 px-2 ">
                 <a href="dashboard.html" class=" hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-house text-pink-600 mr-3"></i>Dashboard</a>
-                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-list-check hover:bg-pink-200 text-pink-600 mr-3"></i>Tasks</a>
+                <a href="Tasks.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-list-check hover:bg-pink-200 text-pink-600 mr-3"></i>Tasks</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-heart hover:bg-pink-200 text-pink-600 mr-3"></i>Habits</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-book hover:bg-pink-200 text-pink-600 mr-3"></i>Journal</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-face-grin hover:bg-pink-200 text-pink-600 mr-3"></i>Mood Tracker</a>
@@ -198,14 +198,14 @@
 <section>
     <div class="flex">
         <!--Task card-->
-        <div class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
+        <div id="dashboardTasks" class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
             <div class=" flex justify-between p-4">
                 <h1>Today's Tasks</h1>
                 <p id="allTasks" class="text-pink-400">View All</p>
             </div>
             <!--Task 1-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input id="task1" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
                 <label for="task1" class="font-bold ml-2">Morning skincare routine</label>
                 <span class="text-gray-500 ml-10">7:00 Am</span>
             </div>
@@ -213,7 +213,7 @@
 
             <!--Task 2-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input id="task2" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
                 <label for="task2" class="font-bold ml-3">Drink 8 glasses of water</label>
                 <span class="text-gray-500 ml-11">All day</span>
             </div>
@@ -221,7 +221,7 @@
 
             <!--Task 3-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input id="task3" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <input type="checkbox" class="w-4 h-4 accent-pink-400">
                 <label for="task3" class="font-bold ml-3">20 mins of exercise</label>
                 <span class="text-gray-500 ml-15">Completed</span>
             </div>
@@ -229,7 +229,7 @@
 
             <!--task 4-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input id="task4" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
                 <label for="task4" class="font-bold ml-3">Read a few pages</label>
                 <span class="text-gray-500 ml-20">9:00 PM</span>
             </div>
@@ -237,7 +237,7 @@
 
             <!--task 5-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input id="task5" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
                 <label for="task5" class="font-bold ml-3">Journal before bed</label>
                 <span class="text-gray-500 ml-17">10:00 PM</span>
             </div>
@@ -245,14 +245,14 @@
 
             <!--task-6-->
             <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input id="task6" type="checkbox" class="w-4 h-4 accent-pink-400">
+                <input type="checkbox" class="w-4 h-4 accent-pink-400">
                 <label for="task6" class="font-bold ml-3">No phone 1hr before bed</label>
                 <span class="text-gray-500 ml-11">9:30 PM</span>
             </div>
             <hr class="text-pink-400/30">
 
             <div id="addTask" class="ml-20 text-pink-600 font-bold flex p-2 cursor-pointer">
-                <i class="fa-solid fa-cross mt-1"></i><p>Add New Task</p>
+                <i class="fa-solid fa-cross mt-1"></i><button id="addTaskBtn">Add New Task</button>
             </div>
             
         </div>
@@ -310,7 +310,7 @@
                </div>
 
                <div class="grid grid-cols-8 rounded-lg bg-gradient-to-r from-sky-100/30 to-sky-200/30 p-3">
-                 <h1 class="text-xs ">SRead</h1>
+                 <h1 class="text-xs ">Read</h1>
                 <input type="checkbox" class="w-5 h-5 accent-pink-400">
                 <input type="checkbox" class="w-5 h-5 accent-pink-400">
                 <input type="checkbox" class="w-5 h-5 accent-pink-400">
@@ -507,7 +507,7 @@
     </main>
    </section>
     
-  <script src="script.js"></script>  
+  <script src="folder.js/script.js"></script>  
   <script src="https://unpkg.com/lucide@latest"></script>
     <script>
   lucide.createIcons();

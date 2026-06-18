@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tasks</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/beb9c9acc8.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-pink-200/40">
+    <section>
+        <div class="bg-white max-w-xl mx-auto p-6 mt-9 space-y-6 rounded-xl border border-pink-600 shadow-md">
+            <!--Header-->
+            <div class="text-pink-500 font-bold text-2xl flex">
+                <i class="fa-solid fa-clipboard "></i>
+                <h1>My Tasks</h1>
+            </div>
+
+            <div class="bg-pink-100 space-y-3 py-5 rounded-xl">
+                <h1 class="flex justify-center text-pink-700 font-bold text-2xl">Total Tasks</h1>
+                <p id="totalTasks" class="flex justify-center text-pink-500 font-bold text-4xl">0</p>
+            </div>
+
+            <div class="flex gap-2 mb-6">
+             <input id="taskInput" type="text" placeholder="Add task.." class="flex-1 border rounded-lg p-2 outline-pink-500">
+             <button id="Btn" class="bg-pink-600 text-white font-black rounded-xl cursor-pointer hover:bg-pink-400 px-4">Add task</button> 
+            </div>
+
+            <!--Task List-->
+            <div>
+                <div class="flex justify-between mb-2">
+                <h2 class="font-bold">Tasks to be completed</h2>
+                <button id="resetButton" class="text-red-400 hover:underline text-sm cursor-pointer">Clear all</button> 
+                </div>
+
+                <div id="taskList" class="space-y-3"></div>  
+            </div>
+        </div>
+            
+    
+    </section>
+    <script src="folder.js/task.js"></script>
+    
+</body>
+</html>
