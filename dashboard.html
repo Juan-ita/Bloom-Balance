@@ -11,6 +11,13 @@
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
 </head>
 <body class="bg-pink-100/30 h-screen">
+
+    <!--Hamburger section-->
+    <input type="checkbox" id="menu" class="hidden peer">
+
+    <label for="menu" class="md:hidden text-3xl p-4 text-pink-400 cursor-pointer fixed top-1  left-2 z-50">
+        <i class="fa-solid fa-bars"></i>
+    </label>
     <section class="flex">
           <!--Side bar-->
         <aside class="bg-white/50 w-64 backdrop-blur border-r border-pink-600 
@@ -22,7 +29,7 @@
                 <a href="dashboard.html" class=" hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-house text-pink-600 mr-3"></i>Dashboard</a>
                 <a href="Tasks.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-list-check hover:bg-pink-200 text-pink-600 mr-3"></i>Tasks</a>
                 <a href="habit.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-heart hover:bg-pink-200 text-pink-600 mr-3"></i>Habits</a>
-                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-book hover:bg-pink-200 text-pink-600 mr-3"></i>Journal</a>
+                <a href="journal.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-book hover:bg-pink-200 text-pink-600 mr-3"></i>Journal</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-face-grin hover:bg-pink-200 text-pink-600 mr-3"></i>Mood Tracker</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-droplet hover:bg-pink-200 text-pink-600 mr-3"></i>Water Tracker</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-bullseye hover:bg-pink-200 text-pink-600 mr-3"></i>Goals</a>
@@ -91,7 +98,7 @@
         <main class="p-6 flex-1">
         <div class="flex justify-between">
             <div>
-              <h1 class="text-2xl font-bold">Good Morning, Queen!<i class="fa-solid fa-spa text-pink-300"></i></h1>
+              <h1 class="text-2xl font-bold mt-5">Good Morning, Queen!<i class="fa-solid fa-spa text-pink-300"></i></h1>
               <p class="text-xs">You've got thes! Let's make today amaizing.</p>
             </div>
             <div>
@@ -344,30 +351,6 @@
                
             </div>
         </div>
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-         <!--Journal-->
-       <!--- <div class="flex flex-col">
-            <div>
-            <div class="bg-white space-y-6 border border-pink-400 p-6 mt-4 ml-5 rounded-xl">
-                <div class="flex justify-between gap-6">
-                    <h1 class="font-bold text-xl">Journal</h1>
-                    <p class="text-xs cursor-pointer text-rose-400 font-bold">New Entry</p>
-                </div>
-                <div class="bg-rose-200 border border-rose-800 rounded-xl p-6 ">
-                    <i class="fa-solid fa-quote-left text-pink-500 text-xl"></i>
-                    <p>Today was a good day. Ifelt productive and calm. I'm gratful for the little things and for another chance for growth.</p>
-                    <i data-lucide="flower" class="text-pink-500"></i>
-
-                    <div class="flex justify-between text-gray-400 text-sm mt-5">
-                        <p>June 21, 2026 . 9:30 PM</p>
-                    </div>
-                </div>
-
-            </div>
-            </div>-->
-
-            
         </div>    
         
     </div>
