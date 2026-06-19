@@ -20,7 +20,7 @@
     </label>
     <section class="flex">
           <!--Side bar-->
-        <aside class="bg-white/50 w-64 backdrop-blur border-r border-pink-600 
+        <aside class="bg-gradient-to-br from-pink-100 to-sky-100 w-64 backdrop-blur border-r border-pink-600 
                       rounded-xl hidden peer-checked:block md:block fixed md:sticky top-0">
              <h1 class="italic text-pink-400 text-2xl"><i class="fa-solid fa-clover"></i>Self-Care</h1> <span class="ml-7 text-gray-600 italic">PLANNER</span> 
              
@@ -87,9 +87,19 @@
              </div>
 
              <!--Reminder-->
-             <div class="bg-rose-400 mt-5 mb-7 rounded-xl p-6">
+             <div class="bg-rose-400 mt-5 mb-7 rounded-xl p-6 shadow-md">
                 <h1 class="font-bold text-lg"><i class="fa-solid fa-heart text-rose-200 ml-2"></i>Reminder</h1>
                 <p class="text-sm">Take care of yourself like you take care of others.</p>
+             </div>
+
+             <div class="bg-white/30 shadow-xl p-3 rounded-full text-xl cursor-pointer hover:bg-white/10 flex justify-center">
+                
+                    <button id="exitBtn">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <p>Log out</p>
+                    </button>
+                    
+             
              </div>
         </aside>
 

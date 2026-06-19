@@ -15,7 +15,7 @@ saveBtn.addEventListener("click", ()=>{
     journals.push(newEntry);
     localStorage.setItem("journals", JSON.stringify(journals));
 
-    alert("Journal saves.");
+    alert("Journal saved.");
 
     titleInput.value = "";
     entryInput.value = "";

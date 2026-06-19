@@ -1,41 +1,19 @@
-// const cards = document.querySelectorAll(".journal-card")
-// const modal = document.getElementById("journalModel")
-// const full_Journal = document.getElementById("fullJournal")
-// const closeBtn = document.getElementById("closeBtn")
-
-// cards.forEach(card=>{
-//     card.addEventListener("click", ()=>{
-//         const text = card.querySelector(".journal-content").innerHTML;
-
-//         full_Journal.innerHTML = text;
-
-//         modal.classList.remove("hidden");
-//         modal.classList.add("flex");
-//     });
-// });
-
-// closeBtn.addEventListener("click", ()=>{
-//     modal.classList.remove("flex");
-//     modal.classList.add("hidden")
-// });
-
-//New entry
-// const newEntryCard = document.getElementById("newEntry");
-
-// newEntryCard.addEventListener("click", ()=>{
-//     window.location.href = "newJournal.html"
-// })
-
-const enriesContainer = document.getElementById("entriesContainer");
+const entriesContainer = document.getElementById("entriesContainer");
 
 const journals = JSON.parse(localStorage.getItem("journals")) || [];
 
+ function deleteJournal(index){
+            journals.splice(index, 1);
+            localStorage.setItem("journals", JSON.stringify(journals));
+            renderJournals();
+        }
+
 //Render journals
 function renderJournals(){
-    enriesContainer.innerHTML = "";
+    entriesContainer.innerHTML = "";
 
     if(journals.length === 0){
-        enriesContainer.innerHTML = `
+        entriesContainer.innerHTML = `
         <p class="text-gray-600 text-lg">No journal entries yet.</p>
         `;
         return;
@@ -51,12 +29,14 @@ function renderJournals(){
 
         card.innerHTML = `
         <div class="flex justify-between">
-                <h1 class="font-bold text-xl text-purple-500">
+                <h1 class="font-bold text-xl text-indigo-500">
                     ${entry.title || "Untitled"}
                 </h1>
                 <p class="text-xs text-rose-400 font-bold">Edit</p>
             </div>
 
+             
+        
             <div class="bg-rose-100 border border-rose-300 rounded-xl p-4 mt-4 h-48 overflow-hidden">
                 <p class="text-gray-700 line-clamp-6">
                     ${entry.text}
@@ -66,12 +46,21 @@ function renderJournals(){
             <p class="text-xs text-gray-400 mt-3">
                 ${entry.date}
             </p>
-        `;
+
+            <button onclick="deleteJournal (${index})" class="text-sm text-red-600 font-bold cursor-pointer">Delete</button>
+
+            `;
+
+            
         //Click opens popup
         card.addEventListener("click", ()=>{
             openJournal(entry);
         });
-        enriesContainer.appendChild(card)
+        entriesContainer.appendChild(card)
+
+       
     });
+    
+    
 }
 renderJournals();
