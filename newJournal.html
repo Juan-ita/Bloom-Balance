@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/beb9c9acc8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-purple-400/10">
+    <section>
+        <div class="bg-white p-6 max-w-xl mx-auto mt-50 rounded-2xl border border-purple-400 shadow-md">
+            <!--Header-->
+           <div class="flex justify-between font-bold text-2xl">
+            <i class="fa-solid fa-pen-fancy"></i>
+            <h1 class="mr-60">New Journal Entry</h1>
+            <a href="journal.html">
+                 <i class="fa-solid fa-xmark hover:text-purple-700 cursor-pointer"></i>
+            </a>
+           </div>
+
+           <!--input-->
+           <input id="title" type="text" placeholder="Title of your day..." class="p-2 rounded-lg border border-purple-200 w-full mt-5 focus:outline-purple-300">
+
+           <div>
+            <h1 class="text-gray-600 mt-4">How are u feeling?</h1>
+            <div class="flex justify-between mt-4 cursor-pointer">
+                <i data-lucide="smile" class="text-yellow-500"></i>
+                <i data-lucide="frown" class="text-gray-600"></i>
+                <i data-lucide="angry" class="text-red-600"></i>
+                <i data-lucide="annoyed" class="text-yellow-500"></i>
+                <i data-lucide="laugh" class="text-yellow-500"></i>
+            </div>
+           </div>
+
+           <!--Text-->
+           <div>
+            <textarea id="entry"
+            placeholder="Write your thoughts here..."
+            class="h-40 p-3 border border-purple-400 rounded-lg mt-6 w-full focus:outline-purple-300" 
+            ></textarea>
+           </div>
+
+           <div class="flex justify-between">
+            <button class="bg-purple-100 p-2 rounded-lg mt-1 text-purple-600 cursor-pointer hover:bg-white/50 border border-purple-400">Save Draft</button>
+            <button id="saveBtn" class="bg-purple-500 rounded-lg text-white p-2 cursor-pointer font-bold hover:bg-purple-600/40">Save Entry</button>
+           </div>
+
+           <div id="entriesContainer"></div>
+
+        </div>
+    </section>
+    <script src="folder.js/new.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+  lucide.createIcons();
+  </script>
+</body>
+</html>
