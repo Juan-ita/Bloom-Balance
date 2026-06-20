@@ -1,8 +1,6 @@
 const form = document.getElementById("user-form")
-form.addEventListener("submit", function(event){
-    event.preventDefault();
-
-
+form.addEventListener("submit", function(event){ //Runs the code when the form is submitted
+    event.preventDefault();//Prevents the page from reloading
 
  const firstName = document.getElementById("user-firstname").value;
  const lastName = document.getElementById("user-lastname").value;

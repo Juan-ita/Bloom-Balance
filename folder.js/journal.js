@@ -1,24 +1,30 @@
 const entriesContainer = document.getElementById("entriesContainer");
 
-const journals = JSON.parse(localStorage.getItem("journals")) || [];
+const journals = JSON.parse(localStorage.getItem("journals")) || []; //Gets the saved journals and if nothing exists create an empty array
 
  function deleteJournal(index){
-            journals.splice(index, 1);
-            localStorage.setItem("journals", JSON.stringify(journals));
-            renderJournals();
+
+    const answer = confirm("Are you sure you want to delete this journal entry?")
+
+    if(answer){
+             journals.splice(index, 1);//Remove one item from the array
+            localStorage.setItem("journals", JSON.stringify(journals));//Stores the new array
+            renderJournals();//Display the updated list
+    }
+           
         }
 
 //Render journals
 function renderJournals(){
-    entriesContainer.innerHTML = "";
+    entriesContainer.innerHTML = "";//Removes everything currrently inside the container
 
     if(journals.length === 0){
         entriesContainer.innerHTML = `
         <p class="text-gray-600 text-lg">No journal entries yet.</p>
         `;
-        return;
+        return;// Ends the function immediately
     }
-    journals.forEach((entry, index) =>{
+    journals.forEach((entry, index) =>{ //Goes through every challange
         const card = document.createElement("div");
 
         card.className = `
@@ -30,7 +36,7 @@ function renderJournals(){
         card.innerHTML = `
         <div class="flex justify-between">
                 <h1 class="font-bold text-xl text-indigo-500">
-                    ${entry.title || "Untitled"}
+                 ${entry.title || "Untitled"} 
                 </h1>
                 <p class="text-xs text-rose-400 font-bold">Edit</p>
             </div>
@@ -53,14 +59,14 @@ function renderJournals(){
 
             
         //Click opens popup
-        card.addEventListener("click", ()=>{
-            openJournal(entry);
+        card.addEventListener("click", ()=>{ //Runs the code when clicked
+            openJournal(entry); //
         });
-        entriesContainer.appendChild(card)
+        entriesContainer.appendChild(card)//This adds the card to the page
 
        
     });
     
     
 }
-renderJournals();
+renderJournals();// Runs the function when the page opens
