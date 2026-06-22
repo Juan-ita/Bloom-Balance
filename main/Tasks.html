@@ -76,6 +76,7 @@ function renderTasks(){
              <input type="checkbox" class="w-5 h-5 accent-pink-400">
              <span>${task.name}</span>
           </div>
+          
 
              <button onclick="removeTask(${index})" class="text-red-600 cursor-pointer">Delete</button>
         </div>
@@ -109,6 +110,10 @@ function renderTasks(){
                 
             }
         }
+        function completeTask(index) {
+    tasks[index].done = true;
+    renderTasks();
+}
 
         //Remove food items
         window.removeTask = function(position){
@@ -120,7 +125,7 @@ function renderTasks(){
 
          let currentTasks = 0;
         totalTasks.textContent = tasks.length// Shows the number of tasks
-        totalTasks.textContent = currentTasks; 
+        currentTasksDisplay.textContent = currentTasks; //Done/complete
         
     reset_button.onclick = function () {
     tasks.length = 0; //Deletes all tasks

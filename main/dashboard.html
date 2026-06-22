@@ -163,13 +163,13 @@
         <div class="bg-white mt-4 p-4 rounded-lg">
           <i class="fa-regular fa-clipboard text-2xl text-pink-500 rounded-full bg-pink-100 p-3"></i>
           <h1 class="text-xs">Tasks Completed</h1>
-        <div class="flex">
-            <p class="font-bold text-xl mr-2">8</p><span>/</span> <span class="ml-1 text-lg">12</span>
+        <div id="taskCount" class="flex">
+            <p class="font-bold text-xl mr-2">4</p><span>/</span> <span class="ml-1 text-lg">12</span>
         </div>
           <div class="w-full bg-pink-100/40 h-2 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-pink-300 to-pink-800 h-full w-[67%] rounded-full"></div>
+            <div id="taskBar" class="bg-gradient-to-r from-pink-300 to-pink-800 h-full w-[33%] rounded-full"></div>
           </div>
-          <p class="text-xs">67%</p>
+          <p id="taskPercent" class="text-xs">33%</p>
         </div>
 
         <!--Habits completed-->
@@ -505,6 +505,15 @@
     menuBtn.onclick = function(){
         sidebar.classList.toggle("-translate-x-full")
     }
+
+    // Get tasks from localStorage
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+// Get habits from localStorage
+const habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+
+
 </script>
 </body>
 </html>
