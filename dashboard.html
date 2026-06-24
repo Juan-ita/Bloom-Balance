@@ -32,7 +32,7 @@
                 <a href="habit.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-heart hover:bg-pink-200 text-pink-600 mr-3"></i>Habits</a>
                 <a href="newJournal.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-book hover:bg-pink-200 text-pink-600 mr-3"></i>Journal</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-face-grin hover:bg-pink-200 text-pink-600 mr-3"></i>Mood Tracker</a>
-                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-droplet hover:bg-pink-200 text-pink-600 mr-3"></i>Water Tracker</a>
+                <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-droplet hover:bg-pink-200 text-pink-600 mr-3"></i>Self-care goals</a>
                 <a href="planner.html" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-regular fa-calendar hover:bg-pink-200 text-pink-600 mr-3"></i>Planner</a>
                 <a href="" class="hover:bg-pink-200 rounded-xl px-3"><i class="fa-solid fa-gear hover:bg-pink-200 text-pink-600 mr-3"></i>Settings</a>
              </nav>
@@ -120,34 +120,50 @@
  <section>
             <div class="flex">
             <div class="bg-pink-600/40 p-6 rounded-xl mt-4 w-1/2">
-            <p><i class="fa-solid fa-quote-left text-pink-500"></i>You glow differently when you prioritize yourself. <i class="fa-solid fa-seedling text-emerald-600 text-xl"></i></p>
+            <p id="quoteText">
+               
+            </p>
         </div>
         <!--Moods-->
         <div class="bg-white p-3 rounded-2xl w-1/2 border border-pink-200">
             <h1 class="font-bold ">How are you feeling?</h1>
             <div class="text-4xl text-amber-300 flex justify-between p-3 mt-3">
                 <div>
-                    <i class="fa-regular fa-face-grin hover:text-pink-300 mood" data-mood="Happy"></i>
-                    <p class="text-sm text-black ">Happy</p>
-                </div>
-                <div>
-                 <i class="fa-regular fa-face-sad-cry hover:text-pink-300 mood" data-mood="Sad"></i>
-                 <p class="text-sm text-black ml-3">Sad</p>
+                    <a href="newJournal.html">
+                      <i class="fa-regular fa-face-grin hover:text-pink-300 mood" data-mood="Happy"></i>
+                      <p class="text-sm text-black ">Happy</p>
+                    </a>
                 </div>
 
                 <div>
-                <i class="fa-regular fa-face-tired hover:text-pink-300 mood" data-mood="Tired"></i>
-                <p class="text-sm text-black ml-3">Tired</p>
+                    <a href="newJournal.html">
+                     <i class="fa-regular fa-face-sad-cry hover:text-pink-300 mood" data-mood="Sad"></i>
+                     <p class="text-sm text-black ml-3">Sad</p>
+                    </a>
                 </div>
 
                 <div>
-                <i class="fa-solid fa-face-meh hover:text-pink-300 mood" data-mood="Ok"></i>
-                <p class="text-sm text-black ml-4 ">Ok</p>
+                    <a href="newJournal.html">
+                     <i class="fa-regular fa-face-tired hover:text-pink-300 mood" data-mood="Tired"></i>
+                     <p class="text-sm text-black ml-3">Tired</p>
+                    </a>
+                
                 </div>
 
                 <div>
-                <i class="fa-solid fa-face-grin-stars hover:text-pink-300 mood" data-mood="Amazing"></i>
-                <p class="text-sm text-black ">Amazing</p>
+                    <a href="newJournal.html">
+                      <i class="fa-solid fa-face-meh hover:text-pink-300 mood" data-mood="Ok"></i>
+                      <p class="text-sm text-black ml-4 ">Ok</p>
+                    </a>
+                
+                </div>
+
+                <div>
+                    <a href="newJournal.html">
+                       <i class="fa-solid fa-face-grin-stars hover:text-pink-300 mood" data-mood="Amazing"></i>
+                       <p class="text-sm text-black ">Amazing</p>
+                    </a>
+                
                 </div>
             </div>
         </div>
@@ -158,43 +174,37 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!--Progress-->
 <section>
-    <div class="grid grid-cols-4">
+    <div class="grid grid-cols-3">
          <!--Task Completed-->
         <div class="bg-white mt-4 p-4 rounded-lg">
           <i class="fa-regular fa-clipboard text-2xl text-pink-500 rounded-full bg-pink-100 p-3"></i>
           <h1 class="text-xs">Tasks Completed</h1>
-        <div id="taskCount" class="flex">
-            <p class="font-bold text-xl mr-2">4</p><span>/</span> <span class="ml-1 text-lg">12</span>
+        <div class="flex">
+            <span id="completedTasks" class="font-bold text-xl mr-2">0</span>
+            <span>/</span> 
+            <span id="totalTasks" class="ml-1 text-lg">0</span>
         </div>
           <div class="w-full bg-pink-100/40 h-2 rounded-full overflow-hidden">
-            <div id="taskBar" class="bg-gradient-to-r from-pink-300 to-pink-800 h-full w-[33%] rounded-full"></div>
+            <div id="taskBar" class="bg-gradient-to-r from-pink-300 to-pink-800 h-full w-[0%] rounded-full"></div>
           </div>
-          <p id="taskPercent" class="text-xs">33%</p>
+          <p id="taskPercent" class="text-xs">0%</p>
         </div>
 
         <!--Habits completed-->
         <div class="bg-white ml-5 p-4 mt-4 rounded-lg">
             <i class="fa-regular fa-heart bg-purple-100 text-2xl rounded-full p-3 text-purple-400"></i><h1 class="text-xs">Habits Completed</h1>
             <div class="flex">
-            <p class="font-bold text-xl mr-2">5</p> <span>/</span> <span class="ml-1 text-lg">7</span>
+            <span id="completedHabits" class="font-bold text-xl mr-2">0</span>
+             <span>/</span>
+              <span id="totalHabits" class="ml-1 text-lg">0</span>
             </div>
             <div class="bg-purple-100 h-2 rounded-full overflow-hidden">
-                <div class="bg-purple-900 h-2 w-[71%] rounded-full"></div>
+                <div id="habitBar" class="bg-purple-900 h-2 w-[0%] rounded-full"></div>
             </div>
-            <p class="text-xs">71%</p>
+            <p id="habitsPercent" class="text-xs">0%</p>
         </div>
 
-        <!--Water  intake-->
-        <div class="bg-white mt-4 p-4 ml-5 rounded-lg">
-            <i class="fa-solid fa-droplet text-sky-400 bg-sky-100 rounded-full p-3 text-2xl"></i><h1 class="text-xs">Water Intake</h1>
-            <div class="flex">
-            <p class="font-bold mr-2 text-xl">6</p> <span>/</span> <span class="text-lg ml-1">8 </span><p class="text-xs mt-2 ml-2">glassses</p>
-            </div>
-            <div class="bg-sky-100 h-2 rounded-full">
-                <div class="bg-sky-800 h-2 rounded-full w-[75%]"></div>
-            </div>
-            <p class="text-xs">75%</p>
-        </div>
+        
 
         <!--Self care score-->
         <div class="bg-white mt-4 p-4 ml-5 rounded-lg">
@@ -218,58 +228,20 @@
         <div id="dashboardTasks" class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
             <div class=" flex justify-between p-4">
                 <h1>Today's Tasks</h1>
-                <p id="allTasks" class="text-pink-400">View All</p>
+                <a href="Tasks.html">
+                    <p id="allTasks" class="text-pink-400 cursor-pointer hover:underline">View All</p>
+
+                </a>
             </div>
-            <!--Task 1-->
-            <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
-                <label for="task1" class="font-bold ml-2">Morning skincare routine</label>
-                <span class="text-gray-500 ml-10">7:00 Am</span>
-            </div>
+            
+            <!--Tasks-->
+            <div id="dashboardTaskList" class="space-y-3 p-3"></div>
             <hr class="text-pink-400/30">
 
-            <!--Task 2-->
-            <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
-                <label for="task2" class="font-bold ml-3">Drink 8 glasses of water</label>
-                <span class="text-gray-500 ml-11">All day</span>
-            </div>
-            <hr class="text-pink-400/30">
-
-            <!--Task 3-->
-            <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input type="checkbox" class="w-4 h-4 accent-pink-400">
-                <label for="task3" class="font-bold ml-3">20 mins of exercise</label>
-                <span class="text-gray-500 ml-15">Completed</span>
-            </div>
-            <hr class="text-pink-400/30">
-
-            <!--task 4-->
-            <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
-                <label for="task4" class="font-bold ml-3">Read a few pages</label>
-                <span class="text-gray-500 ml-20">9:00 PM</span>
-            </div>
-            <hr class="text-pink-400/30">
-
-            <!--task 5-->
-            <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input  type="checkbox" class="w-4 h-4 accent-pink-400">
-                <label for="task5" class="font-bold ml-3">Journal before bed</label>
-                <span class="text-gray-500 ml-17">10:00 PM</span>
-            </div>
-            <hr class="text-pink-400/30">
-
-            <!--task-6-->
-            <div class="flex items-center text-xs bg-pink-200/30 p-3">
-                <input type="checkbox" class="w-4 h-4 accent-pink-400">
-                <label for="task6" class="font-bold ml-3">No phone 1hr before bed</label>
-                <span class="text-gray-500 ml-11">9:30 PM</span>
-            </div>
-            <hr class="text-pink-400/30">
-
-            <div id="addTask" class="ml-20 text-pink-600 font-bold flex p-2 cursor-pointer">
-                <i class="fa-solid fa-cross mt-1"></i><button id="addTaskBtn">Add New Task</button>
+                <a href="Tasks.html">
+                    <div id="addTask" class="text-center text-pink-600 font-bold p-2 ">
+                    <button id="addTaskBtn" class="bg-pink-300 rounded-lg p-3 px-4 cursor-pointer"><i class="fa-solid fa-cross mt-1"></i>Add New Task</button>
+                </a>
             </div>
             
         </div>
@@ -370,39 +342,7 @@
     
 <section>
     <div class="flex">
-<!--Water Tracker-->
-            <div>
-             <div class="bg-white border border-pink-400 rounded-lg mt-5 space-y-6 p-6">
-                <div class="flex justify-between">
-                 <h1 class="font-bold text-2xl">Water Tracker</h1>
-                <p class="font-bold text-pink-400 text-sm cursor-pointer">Edit Goal</p> 
-                </div>
 
-
-            <div class="flex">
-               <i data-lucide="milk" class="w-50 h-50 text-blue-400"></i>
-               <div>
-                <p class="font-bold text-6xl">6 </p><span class="text-xl font-semibold">of 8 glasses</span>
-                <p class="italic">Keep going!</p>
-               </div>
-                </div>
-                   <!--Glasses-->
-                <div class="flex">
-                <div class="text-blue-400 flex">
-                <i data-lucide="glass-water"></i>
-                <i data-lucide="glass-water"></i>
-                <i data-lucide="glass-water"></i>
-                <i data-lucide="glass-water"></i>
-                <i data-lucide="glass-water"></i>
-                <i data-lucide="glass-water"></i>
-                    </div>
-                
-                <i data-lucide="glass-water"></i>
-                <i data-lucide="glass-water"></i>
-                </div>
-                
-            </div>
-            </div>
     <!-----Self-care Goals-->
      <div class="flex">
       <div class="bg-white border border-pink-400 rounded-lg p-6 space-y-6 mt-4 ml-3">
@@ -483,6 +423,19 @@
       </div>
 
      </div>
+     <!--Affirmation-->
+     <div class="bg-white p-6 ml-4 mt-4 rounded-lg border border-pink-600 ">
+        <div class="bg-pink-200 rounded-3xl shadow-md w-80 p-2">
+            <h1 class="text-center text-2xl font-bold mb-4">Daily Affirmation</h1>
+
+             
+             <div class="space-y-2 text-gray-700 bg-pink-300/40 p-5">
+                <p id="affirmationText" class="text-gray-700 italic mt-4">Loading...</p>
+
+                <button id="newAffirmationBtn" class="bg-pink-500 text-white px-4 py-2 rounded-xl mt-4 hover:bg-pink-700 ">New Affirmation</button>
+             </div>
+        </div>
+     </div>
      
      
     </div>
@@ -492,7 +445,7 @@
     </main>
    </section>
     
-  <script src="folder.js/script.js"></script>  
+  <!--<script src="folder.js/script.js"></script>-->
   <script src="https://unpkg.com/lucide@latest"></script>
     <script>
   lucide.createIcons();
@@ -505,12 +458,202 @@
     menuBtn.onclick = function(){
         sidebar.classList.toggle("-translate-x-full")
     }
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   //Quote
+  const quotes = document.getElementById("quoteText")
 
-    // Get tasks from localStorage
+  //get the quotes from the API
+  async function fetchQuote() {
+    try{
+        //Send a request to the API
+        const response = await fetch("https://dummyjson.com/quotes/random");
+
+        //Change the response into a javascript object
+        const data = await response.json();
+
+        //Display the quote and the author's name on the page
+        quotes.textContent = `"${data.quote}" -${data.author}`;
+    }catch(error){
+      //Show a message if the quote could not be loaded
+        quotes.textContent = "Couldn't load a quote.";
+        console.error(error);
+    }
+  }
+
+  //Change every 6sec
+  fetchQuote();
+  setInterval(fetchQuote, 10000);
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //Task bar
+//Get tasks from localStorage
 const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// Get habits from localStorage
+//total tasks
+const total = tasks.length;
+
+//Completed tasks
+const completed = tasks.filter(task => task.done).length;
+
+//Remeining tasks
+const remaining = total - completed;
+
+//Percentage
+let percent = 0;
+
+if (total > 0){
+    percent = Math.round((completed / total) * 100);
+}
+
+//Show values
+document.getElementById("completedTasks").textContent = completed;
+document.getElementById("totalTasks").textContent = total;
+document.getElementById("taskPercent").textContent = percent + "%";
+
+//Process bar
+document.getElementById("taskBar").style.width = percent + "%"
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Task card
+const dashboard_task_list = document.getElementById("dashboardTaskList")
+//Show on dashboard
+function renderDashdoardTasks(){
+
+    //Clear old tasks
+    dashboard_task_list.innerHTML = "";
+
+    //if no tasks
+    if (tasks.length === 0){
+        dashboard_task_list.innerHTML =`
+        <p class="text-gray-500 text-center">No tasks yet.</p>
+        `;
+        return;
+
+    }
+
+    //loop through tasks
+    tasks.forEach(task =>{
+        const row = document.createElement("div");
+
+        row.innerHTML = `
+        <div class="flex items-center justify-between bg-pink-100/30 p-3 rounded-lg">
+            <div class="flex items-center gap-2">
+                <input type="checkbox" class="w-4 h-4 accent-pink-400"
+                ${task.done ? "checked" :""}>
+
+                <span class="${task.done ? "line-through text-gray-400" : ""}">
+                    ${task.name}</span>
+            </div>
+        </div>
+        `;
+        dashboard_task_list.appendChild(row)
+    })
+}
+//Run the page
+renderDashdoardTasks();
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Habit
 const habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+//Total habits
+const totalHabits = habits.length
+
+//completed habits
+const completedHabits = habits.filter(habit => habit.done).length;
+
+//Percentage
+let habitsPercent = 0;
+if(totalHabits > 0){
+    habitsPercent = Math.round((completedHabits / totalHabits) * 100)
+}
+
+//Show values
+document.getElementById("completedHabits").textContent= completedHabits;
+document.getElementById("totalHabits").textContent = totalHabits
+document.getElementById("habitsPercent").textContent = habitsPercent + "%";
+
+//progress bar
+document.getElementById("habitBar").style.width = habitsPercent + "%"
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Mood
+//Get all mood icons
+const moods = document.querySelectorAll(".mood");
+
+moods.forEach(mood => {
+    mood.addEventListener("click", () => {
+
+        //save selected mood
+        localStorage.setItem("selectedMood", mood.dataset.mood);
+
+        window.location.href = "newJournal.html"
+    })
+})
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Affirmation Card
+console.log("Reached affirmation section")
+const affirmationText = document.getElementById("affirmationText");
+console.log(affirmationText)
+
+//Get btn
+const newBtn = document.getElementById("newAffirmationBtn")
+console.log(newBtn)
+
+const affirmations = [
+     "I deserve rest and kindness",
+    "Small steps lead to big changes",
+    "I am enough just as I am ",
+    "Progress is more important than perfection",
+    "I choose peace over pressure",
+    "My well-being matters",
+    "I am growing every day",
+    "Today is a fresh start"
+];
+
+
+function getAffirmation(){
+    //Generate random number
+    const randomIndex = Math.floor(Math.random() * affirmations.length)
+
+    //Display the affirmation
+    affirmationText.textContent = affirmations[randomIndex];
+}
+//Get one affirmation when the page opens
+getAffirmation()
+
+//Get another affirmation btn is clicked
+if (newBtn){
+    newBtn.onclick = function(){
+
+    getAffirmation();
+    console.log("Affirmation loaded")
+}
+}
+
 
 
 

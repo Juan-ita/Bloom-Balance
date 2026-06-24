@@ -74,7 +74,7 @@ function renderTasks(){
         <div class="flex justify-between items-center p-3 border rounded-lg">
           <div class="flex items-center gap-2">
              <input type="checkbox" class="w-5 h-5 accent-pink-400">
-             <span>${task.name}</span>
+             <span class="${task.done ? "line-through text-gray-400" : ""}">${task.name}</span>
           </div>
           
 
