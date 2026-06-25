@@ -72,13 +72,13 @@ function renderHabits(){
         <div class="grid grid-cols-8 items-center bg-pink-50 border border-pink-200 p-3 rounded-xl">
           <h1 class="text-sm font-medium">${habit.name}</h1>
 
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
-          <input type="checkbox" class="w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
+          <input type="checkbox" class="habit-checkbox w-5 h-5 accent-pink-400" ${habit.done ? "checked" : ""} onchange = "toggleHabit(${index})">
         </div>
         <button onclick="removeHabit(${index})" class="text-red-500 text-sm mt-2 hover:underline">Delete</button>
         `;
@@ -90,7 +90,7 @@ function renderHabits(){
         if(habit_input.value !== "") { //Makes sure the user typed sth
             const new_habit = {
                 name: habit_input.value,
-                done: false
+                days: [false, false, false, false,false,false,false]
             };
 
             habits.push(new_habit);// Adds the new habit to the end of the array

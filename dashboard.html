@@ -226,7 +226,7 @@
     <div class="flex">
         <!--Task card-->
         <div id="dashboardTasks" class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
-            <div class=" flex justify-between p-4">
+            <div class=" flex justify-between gap-15 p-4">
                 <h1>Today's Tasks</h1>
                 <a href="Tasks.html">
                     <p id="allTasks" class="text-pink-400 cursor-pointer hover:underline">View All</p>
@@ -240,7 +240,9 @@
 
                 <a href="Tasks.html">
                     <div id="addTask" class="text-center text-pink-600 font-bold p-2 ">
-                    <button id="addTaskBtn" class="bg-pink-300 rounded-lg p-3 px-4 cursor-pointer"><i class="fa-solid fa-cross mt-1"></i>Add New Task</button>
+                    <button id="addTaskBtn" class="bg-pink-300 rounded-lg p-3 px-4 cursor-pointer">
+                        <i class="fa-solid fa-cross mt-1"></i>
+                        Add New Task</button>
                 </a>
             </div>
             
@@ -557,26 +559,39 @@ function renderDashdoardTasks(){
 //Run the page
 renderDashdoardTasks();
 
-
-
-
-
-
-
-
-
-
-
-
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Habit
 const habits = JSON.parse(localStorage.getItem("habits")) || [];
 
+//Get all habit rows
+const habitRows = document.querySelectorAll(".habit-row");
+
+//Number of completed habits
+let completedHabits = 0;
+
+//Loop through each habit row
+habitRows.forEach(row => {
+    //Get the 7 checkboxes inside the row
+    const boxes = row.querySelectorAll(".habit-checkbox");
+
+    //Count checked boxes
+    let checkedCount = 0;
+
+    boxes.forEach(box => {
+        if (box.checked){
+            checkedCount++;
+        }
+    })
+    //if all 7 are checked, mark habit as done
+    if(checkedCount === 7){
+        completedHabits++;
+}
+});
+
+
 //Total habits
 const totalHabits = habits.length
 
-//completed habits
-const completedHabits = habits.filter(habit => habit.done).length;
 
 //Percentage
 let habitsPercent = 0;
