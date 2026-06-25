@@ -10,7 +10,7 @@
    
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
 </head>
-<body class="bg-pink-100/30 h-screen">
+<body class="bg-pink-100/30 h-screen overflow-x-hidden">
 
     <!--Hamburger section-->
     <div id="menuBtn" class="md:hidden text-3xl p-4 text-pink-400 cursor-pointer fixed top-1 left-1 z-50">
@@ -20,10 +20,10 @@
 
     <section class="flex">
           <!--Side bar-->
-        <aside id="sidebar" class="bg-gradient-to-br from-pink-100 to-sky-100 w-64 backdrop-blur border-r border-pink-600 
+        <aside id="sidebar" class="w-64 min-w-64 bg-gradient-to-br from-pink-100 to-sky-100 w-64 backdrop-blur border-r border-pink-600 
                       rounded-xl md:translate-x-0 fixed md:static top-0 h-screen -translate-x-full
                       transition-transform duration-300 z-40">
-             <h1 class="italic text-pink-400 text-2xl"><i class="fa-solid fa-clover"></i>Self-Care</h1> <span class="ml-7 text-gray-600 italic">PLANNER</span> 
+             <h1 class="italic text-pink-400 text-2xl whitespace-nowrap"><i class="fa-solid fa-clover"></i>Self-Care</h1> <span class="ml-7 text-gray-600 italic">PLANNER</span> 
              
              <!--Features-->
              <nav class="space-y-6 flex flex-col mt-7 px-2 ">
@@ -118,16 +118,16 @@
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>        
 <!--Quote-->
  <section>
-            <div class="flex">
-            <div class="bg-pink-600/40 p-6 rounded-xl mt-4 w-1/2">
-            <p id="quoteText">
+            <div class="grid grid-cols-1 gap-4">
+            <div class="bg-pink-100/40 p-6 rounded-xl mt-4 h-64 overflow-y-auto border border-pink-600">
+              <p id="quoteText">
                
-            </p>
-        </div>
+              </p>
+            </div>
         <!--Moods-->
-        <div class="bg-white p-3 rounded-2xl w-1/2 border border-pink-200">
+       <!-- <div class="bg-white p-3 rounded-2xl mt-4 border border-pink-200 h-64">
             <h1 class="font-bold ">How are you feeling?</h1>
-            <div class="text-4xl text-amber-300 flex justify-between p-3 mt-3">
+            <div class="text-4xl text-amber-300 flex justify-between p-3 mt-3 grid grid-cols-5 text-center">
                 <div>
                     <a href="newJournal.html">
                       <i class="fa-regular fa-face-grin hover:text-pink-300 mood" data-mood="Happy"></i>
@@ -166,7 +166,7 @@
                 
                 </div>
             </div>
-        </div>
+        </div>-->
         
     </div>
 </section>
@@ -174,7 +174,7 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!--Progress-->
 <section>
-    <div class="grid grid-cols-3">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
          <!--Task Completed-->
         <div class="bg-white mt-4 p-4 rounded-lg">
           <i class="fa-regular fa-clipboard text-2xl text-pink-500 rounded-full bg-pink-100 p-3"></i>
@@ -191,7 +191,7 @@
         </div>
 
         <!--Habits completed-->
-        <div class="bg-white ml-5 p-4 mt-4 rounded-lg">
+        <div class="bg-white p-4 mt-4 rounded-lg">
             <i class="fa-regular fa-heart bg-purple-100 text-2xl rounded-full p-3 text-purple-400"></i><h1 class="text-xs">Habits Completed</h1>
             <div class="flex">
             <span id="completedHabits" class="font-bold text-xl mr-2">0</span>
@@ -207,7 +207,7 @@
         
 
         <!--Self care score-->
-        <div class="bg-white mt-4 p-4 ml-5 rounded-lg">
+        <div class="bg-white mt-4 p-4 rounded-lg">
             <i class="fa-solid fa-leaf text-green-500 text-2xl bg-green-100 rounded-full p-3"></i><h1 class="text-xs">Self-Care Score</h1>
             <p class="font-bold text-2xl">85%</p>
            
@@ -223,7 +223,7 @@
 
 <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <section>
-    <div class="flex">
+    <div class="grid-cols-1 md:grid-cols-2">
         <!--Task card-->
         <div id="dashboardTasks" class="bg-white border border-pink-400 mt-5 rounded-lg space-y-">
             <div class=" flex justify-between gap-15 p-4">
@@ -250,7 +250,7 @@
 
 <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!--Habit Tracker-->
-        <div class="bg-white space-y-6 ml-4 mt-5 border border-pink-400 rounded-lg p-6">
+        <!--<div class="bg-white space-y-6 ml-4 mt-5 border border-pink-400 rounded-lg p-6 hidden md:block">
             <div class="flex justify-between">
                 <h1 class="font-bold">Habit Tracker</h1>
                 <p class="text-pink-500 text-sm cursor-pointer hover:underline">View All</p>
@@ -335,7 +335,7 @@
                
             </div>
         </div>
-        </div>    
+        </div>-->    
         
     </div>
 </section>
@@ -343,11 +343,11 @@
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
     
 <section>
-    <div class="flex">
+    <div class="grid grid-cols-1 md:grid-cols-2">
 
-    <!-----Self-care Goals-->
+       <!-----Self-care Goals-->
      <div class="flex">
-      <div class="bg-white border border-pink-400 rounded-lg p-6 space-y-6 mt-4 ml-3">
+      <div class="bg-white border border-pink-400 rounded-lg p-6 space-y-6 mt-4 ml-3 hidden md:block">
         <!--Header-->
         <div class="flex justify-between gap-9">
             <h1 class="font-bold text-2xl">Self-Care Goals</h1>
@@ -391,7 +391,7 @@
 
       </div> 
       <!--Upcoming events-->
-      <div class="bg-white rounded-lg border border-pink-400 space-y-6 p-6 mt-4 ml-4">
+      <div class="bg-white rounded-lg border border-pink-400 space-y-6 p-6 mt-4 ml-4 hidden md:block">
         <div class="font-bold text-2xl">
             <h1>Upcoming Reminders</h1>
         </div>
@@ -426,8 +426,8 @@
 
      </div>
      <!--Affirmation-->
-     <div class="bg-white p-6 ml-4 mt-4 rounded-lg border border-pink-600 ">
-        <div class="bg-pink-200 rounded-3xl shadow-md w-80 p-2">
+     <div class="bg-white p-6 ml-4 mt-4 rounded-lg border border-pink-600">
+        <div class="bg-pink-200 rounded-3xl shadow-md w-80 p-6">
             <h1 class="text-center text-2xl font-bold mb-4">Daily Affirmation</h1>
 
              
